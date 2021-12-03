@@ -2,6 +2,8 @@ from time import sleep
 from selenium import webdriver
 import time
 
+Target_Number =  input("Enter Your Target Number: ")
+
 #Create Instance of FireFox Browser
 driver = webdriver.Firefox() 
 
@@ -9,7 +11,7 @@ driver = webdriver.Firefox()
 frequency = 1
 
 #Target Mobile Number
-mobile_number = 7051675193 #Set the input for mobile_number
+
 
 for i in range(frequency):
 
@@ -22,7 +24,7 @@ for i in range(frequency):
     element = driver.find_element_by_xpath("//input[@class='_2IX_2- VJZDxU']")
 
     #Phone number to send sms to 
-    element.send_keys("7051675193")
+    element.send_keys(Target_Number)
 
     #find the element to send a forgot password
     otp = driver.find_element_by_xpath("//button[@class='_2KpZ6l _2HKlqd _3NgS1a']")
